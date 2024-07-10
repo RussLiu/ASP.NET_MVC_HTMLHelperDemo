@@ -15,7 +15,7 @@ namespace HTMLHelperDemo.Models
         [DisplayName("密碼")]
         [Required]
         public string Password { get; set; }
-        [DisplayName("再次輸入密碼")]
+        [DisplayName("再次確認密碼")]
         [Required]
         [Compare("Password",ErrorMessage ="輸入密碼必須相同")]
         public string Password2 { get; set; }
@@ -30,5 +30,9 @@ namespace HTMLHelperDemo.Models
         [Required]
         [EmailAddress(ErrorMessage = "Email格式有誤")]
         public string Email { get; set; }
+
+        [DisplayName("性別")]
+        [Required(ErrorMessage = "需選取性別")]
+        public bool Gender { get; set; }
     }
 }
